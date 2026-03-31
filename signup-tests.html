@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>10 Signup &amp; Demo Page CRO Experiments</title>
+  <meta name="description" content="A/B test ideas for signup and demo request pages: form length, social proof, incentive framing, CTA wording, and objection handling.">
+  <link rel="canonical" href="https://crolabs.github.io/crolabs-experiment-library/signup-tests.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="./"><img src="images/logo.svg" alt="CROLabs"> Experiment Library</a>
+  <nav>
+    <a href="landing-page-tests.html">Landing Pages</a>
+    <a href="pricing-page-tests.html">Pricing Pages</a>
+    <a href="signup-tests.html">Signup &amp; Demo</a>
+    <a href="ab-test-brief-template.html">Brief Template</a>
+    <a href="sample-size-calculator.html">Calculator</a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>10 Signup &amp; Demo Page Tests to Reduce Drop-Off</h1>
+  <p>
+    Signup and demo pages are the last step before a lead enters your pipeline.
+    Small friction reductions here translate directly into more activated users
+    or qualified leads. Each test below includes a hypothesis, the change, the
+    primary metric, and risks.
+  </p>
+
+  <h2>Form Length &amp; Fields</h2>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Form length</span><span class="tag tag--risk-med">Medium risk</span></div>
+    <h3>1. Single-step form vs. multi-step wizard</h3>
+    <p><strong>Hypothesis:</strong> Breaking a 5+ field form into 2-3 short steps will increase completion rate because each step looks fast, and the progress indicator creates commitment momentum.</p>
+    <p><strong>Change:</strong> Split the form into steps: (1) email, (2) name + company, (3) use case. Show a progress bar.</p>
+    <p><strong>Primary metric:</strong> Form completion rate (not just first-step starts).</p>
+    <p><strong>What could go wrong:</strong> If steps feel pointless or slow (e.g., one field per step), visitors will abandon mid-flow. Group fields logically.</p>
+  </div>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Field removal</span><span class="tag tag--risk-med">Medium risk</span></div>
+    <h3>2. Remove the phone number field</h3>
+    <p><strong>Hypothesis:</strong> Removing the phone field will increase form completion because phone number is the highest-friction field&mdash;visitors associate it with unsolicited sales calls.</p>
+    <p><strong>Change:</strong> Delete the phone field. Collect it later in onboarding if needed.</p>
+    <p><strong>Primary metric:</strong> Form completion rate.</p>
+    <p><strong>What could go wrong:</strong> If your sales team relies on phone outreach, you lose a qualification signal. Discuss with sales first.</p>
+  </div>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Auto-fill</span><span class="tag tag--risk-low">Low risk</span></div>
+    <h3>3. Social login (Google/GitHub) vs. email-only</h3>
+    <p><strong>Hypothesis:</strong> Adding a "Continue with Google" button will increase signup rate because it eliminates password creation and reduces keystrokes to one click.</p>
+    <p><strong>Change:</strong> Add OAuth buttons above the email form. Keep the email option as a fallback.</p>
+    <p><strong>Primary metric:</strong> Total signup completions.</p>
+    <p><strong>What could go wrong:</strong> Some enterprise users cannot use social login due to IT policy. Always keep the email fallback.</p>
+  </div>
+
+  <h2>Social Proof on the Signup Page</h2>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Social proof</span><span class="tag tag--risk-low">Low risk</span></div>
+    <h3>4. Add a "Join X teams" counter next to the form</h3>
+    <p><strong>Hypothesis:</strong> Showing the number of teams or users who have already signed up will increase conversions by reducing the perceived risk of trying something new.</p>
+    <p><strong>Change:</strong> Add a single line like "Join 2,400+ teams" or "1,200 experiments launched this month" next to or above the submit button.</p>
+    <p><strong>Primary metric:</strong> Form submission rate.</p>
+    <p><strong>What could go wrong:</strong> If your numbers are small, they can work against you. Wait until you have a number that sounds credible for your category.</p>
+  </div>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Testimonial</span><span class="tag tag--risk-low">Low risk</span></div>
+    <h3>5. Sidebar testimonial vs. no testimonial</h3>
+    <p><strong>Hypothesis:</strong> Adding a short, specific testimonial in the sidebar next to the form will increase completion by reinforcing the decision at the moment of commitment.</p>
+    <p><strong>Change:</strong> Add a quote with photo, name, role, and a quantitative result in a sidebar panel.</p>
+    <p><strong>Primary metric:</strong> Form submission rate.</p>
+    <p><strong>What could go wrong:</strong> A vague testimonial ("Love it!") adds noise, not trust. Use a quote that mentions a specific outcome.</p>
+  </div>
+
+  <h2>Incentive &amp; Framing</h2>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Incentive</span><span class="tag tag--risk-med">Medium risk</span></div>
+    <h3>6. Free trial vs. free audit/report as the signup hook</h3>
+    <p><strong>Hypothesis:</strong> Offering a "Free CRO audit of your homepage" instead of a generic "14-day free trial" will increase signups because the audit delivers immediate, tangible value and gives the visitor a reason to engage with the product right away.</p>
+    <p><strong>Change:</strong> Change the page headline, CTA, and confirmation email to frame the signup around receiving an audit report.</p>
+    <p><strong>Primary metric:</strong> Signup rate; secondary: activation rate (did they actually use the product within 7 days?).</p>
+    <p><strong>What could go wrong:</strong> You need to actually deliver the audit automatically, or the experience falls flat. Make sure the product can generate it on signup.</p>
+  </div>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">CTA framing</span><span class="tag tag--risk-low">Low risk</span></div>
+    <h3>7. "Book a demo" vs. "See it in action"</h3>
+    <p><strong>Hypothesis:</strong> Changing "Book a Demo" to "See [Product] in Action" will increase demo requests because it shifts the frame from a sales meeting to a product experience, which feels lower-commitment.</p>
+    <p><strong>Change:</strong> Update CTA button and page heading. Same form, same flow.</p>
+    <p><strong>Primary metric:</strong> Demo request submissions.</p>
+    <p><strong>What could go wrong:</strong> Visitors may expect an instant video, not a scheduled call. Manage expectations in the sub-headline or confirmation page.</p>
+  </div>
+
+  <h2>Objection Handling &amp; Reassurance</h2>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Objection handling</span><span class="tag tag--risk-low">Low risk</span></div>
+    <h3>8. Add micro-copy under each field explaining why you need it</h3>
+    <p><strong>Hypothesis:</strong> Adding a brief explanation under sensitive fields (e.g., "We use your company URL to prepare your audit" under the website field) will increase completion by preempting privacy concerns.</p>
+    <p><strong>Change:</strong> Add 5-10 word helper text beneath each non-obvious field.</p>
+    <p><strong>Primary metric:</strong> Per-field drop-off rate (if trackable); overall form completion rate.</p>
+    <p><strong>What could go wrong:</strong> Too much text makes the form look longer. Keep helper text to one short line per field.</p>
+  </div>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Privacy</span><span class="tag tag--risk-low">Low risk</span></div>
+    <h3>9. Add a "We won't spam you" line + privacy link near submit</h3>
+    <p><strong>Hypothesis:</strong> A short privacy reassurance near the submit button will increase submissions by reducing fear of email spam, especially for visitors who have never heard of the brand before.</p>
+    <p><strong>Change:</strong> Add a small text line and link to your privacy policy directly beneath the submit button.</p>
+    <p><strong>Primary metric:</strong> Form submission rate.</p>
+    <p><strong>What could go wrong:</strong> Mentioning spam can backfire if the visitor was not thinking about it. Test carefully: some audiences respond better to no mention at all.</p>
+  </div>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Confirmation</span><span class="tag tag--risk-med">Medium risk</span></div>
+    <h3>10. Inline success message vs. redirect to a thank-you page</h3>
+    <p><strong>Hypothesis:</strong> Showing an inline success message with a clear next step (e.g., "Check your email for your audit" or "Your demo is booked for Thursday") will feel faster and reduce confusion compared to redirecting to a separate thank-you page.</p>
+    <p><strong>Change:</strong> Replace the redirect with an inline confirmation that replaces the form. Include the next step prominently.</p>
+    <p><strong>Primary metric:</strong> Post-signup activation rate (email open, first login, or demo attendance).</p>
+    <p><strong>What could go wrong:</strong> If you rely on the thank-you page URL for conversion tracking (e.g., in Google Ads), switching to inline confirmation can break your attribution. Set up event-based tracking before running this test.</p>
+  </div>
+
+  <h2>When to Run These</h2>
+  <p>
+    Start with the lowest-friction changes (3, 4, 5, 7, 8, 9) to get early wins.
+    Move to form restructuring (1, 2) and incentive reframing (6) once you have
+    baseline data. Use the <a href="sample-size-calculator.html">sample-size
+    calculator</a> to confirm you have enough traffic.
+  </p>
+
+  <div class="cta-banner">
+    <p>Launch signup experiments without writing code.</p>
+    <a class="btn" href="https://crolabs.com">Try CROLabs free</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  &copy; 2025 <a href="https://crolabs.com">CROLabs</a>. This experiment library
+  is open-source and provided as-is.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A/B Test Sample-Size Calculator &mdash; Free Tool</title>
+  <meta name="description" content="Estimate how many visitors you need per variant to reach statistical significance in your A/B test. Free, no signup required.">
+  <link rel="canonical" href="https://crolabs.github.io/crolabs-experiment-library/sample-size-calculator.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="./"><img src="images/logo.svg" alt="CROLabs"> Experiment Library</a>
+  <nav>
+    <a href="landing-page-tests.html">Landing Pages</a>
+    <a href="pricing-page-tests.html">Pricing Pages</a>
+    <a href="signup-tests.html">Signup &amp; Demo</a>
+    <a href="ab-test-brief-template.html">Brief Template</a>
+    <a href="sample-size-calculator.html">Calculator</a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>A/B Test Sample-Size Calculator</h1>
+  <p>
+    Enter your current conversion rate and the minimum improvement you want to
+    detect. The calculator returns the number of visitors you need <strong>per
+    variant</strong> to reach statistical significance.
+  </p>
+
+  <div class="calc-form">
+    <label for="baseline">Baseline conversion rate (%)</label>
+    <input type="number" id="baseline" value="3" min="0.01" max="100" step="0.1">
+
+    <label for="mde">Minimum detectable effect &mdash; relative lift (%)</label>
+    <input type="number" id="mde" value="20" min="1" max="500" step="1">
+
+    <label for="confidence">Confidence level</label>
+    <select id="confidence">
+      <option value="1.645">90%</option>
+      <option value="1.96" selected>95%</option>
+      <option value="2.576">99%</option>
+    </select>
+
+    <label for="power">Statistical power</label>
+    <select id="power">
+      <option value="0.84" selected>80%</option>
+      <option value="1.28">90%</option>
+    </select>
+
+    <button class="btn" type="button" onclick="calculate()" style="margin-top:1.25rem;">Calculate</button>
+
+    <div class="calc-result" id="result"></div>
+  </div>
+
+  <h2>How to Use This</h2>
+  <ol>
+    <li><strong>Baseline conversion rate</strong> &mdash; your current conversion rate for the page or flow you are testing. Check your analytics for the last 30 days.</li>
+    <li><strong>Minimum detectable effect (MDE)</strong> &mdash; the smallest relative improvement you care about. A 20% MDE on a 3% baseline means you want to detect a move from 3.0% to 3.6%.</li>
+    <li><strong>Confidence level</strong> &mdash; 95% is standard. Use 90% for exploratory tests; 99% for high-stakes changes.</li>
+    <li><strong>Statistical power</strong> &mdash; 80% is the most common default. 90% reduces the chance of missing a real effect but requires more traffic.</li>
+  </ol>
+  <p>
+    The result is the number of visitors <strong>per variant</strong>. For a
+    standard A/B test (two variants), double it to get total traffic required.
+    Divide by your daily traffic to estimate how many days the test needs to run.
+  </p>
+
+  <h3>Rules of thumb</h3>
+  <ul>
+    <li>Always run a test for at least one full business cycle (usually 7 days) even if you hit the sample size sooner.</li>
+    <li>Do not peek at results and stop early&mdash;that inflates false-positive rates. Decide your stop criteria before launch.</li>
+    <li>If the required sample size is larger than 4 weeks of traffic, either increase the MDE (look for bigger wins) or test on a higher-traffic page.</li>
+  </ul>
+
+  <div class="cta-banner">
+    <p>CROLabs handles sample-size estimation, traffic allocation, and significance detection automatically.</p>
+    <a class="btn" href="https://crolabs.com">Try CROLabs free</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  &copy; 2025 <a href="https://crolabs.com">CROLabs</a>. This experiment library
+  is open-source and provided as-is.
+</footer>
+
+<script>
+function calculate() {
+  var p = parseFloat(document.getElementById('baseline').value) / 100;
+  var mde = parseFloat(document.getElementById('mde').value) / 100;
+  var zAlpha = parseFloat(document.getElementById('confidence').value);
+  var zBeta = parseFloat(document.getElementById('power').value);
+
+  if (isNaN(p) || isNaN(mde) || p <= 0 || p >= 1 || mde <= 0) {
+    document.getElementById('result').style.display = 'block';
+    document.getElementById('result').textContent = 'Please enter valid numbers.';
+    return;
+  }
+
+  var p2 = p * (1 + mde);
+  if (p2 >= 1) {
+    document.getElementById('result').style.display = 'block';
+    document.getElementById('result').textContent = 'The lifted conversion rate exceeds 100%. Lower your MDE or baseline.';
+    return;
+  }
+
+  // Standard two-proportion z-test sample size formula
+  var pBar = (p + p2) / 2;
+  var numerator = Math.pow(zAlpha * Math.sqrt(2 * pBar * (1 - pBar)) + zBeta * Math.sqrt(p * (1 - p) + p2 * (1 - p2)), 2);
+  var denominator = Math.pow(p2 - p, 2);
+  var n = Math.ceil(numerator / denominator);
+
+  var totalTwo = (n * 2).toLocaleString();
+  var nFormatted = n.toLocaleString();
+
+  var el = document.getElementById('result');
+  el.style.display = 'block';
+  el.innerHTML =
+    '<strong>' + nFormatted + ' visitors per variant</strong><br>' +
+    '<span style="font-weight:normal;font-size:0.9rem;">' +
+    'For a two-variant test, you need <strong>' + totalTwo + '</strong> total visitors. ' +
+    'Baseline: ' + (p * 100).toFixed(2) + '% &rarr; Target: ' + (p2 * 100).toFixed(2) + '%' +
+    '</span>';
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>10 Pricing Page CRO Experiments for SaaS &amp; Ecommerce</title>
+  <meta name="description" content="Practical A/B test ideas for pricing pages: toggle defaults, plan emphasis, trust signals, feature tables, FAQ positioning, and anchoring tactics.">
+  <link rel="canonical" href="https://crolabs.github.io/crolabs-experiment-library/pricing-page-tests.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="./"><img src="images/logo.svg" alt="CROLabs"> Experiment Library</a>
+  <nav>
+    <a href="landing-page-tests.html">Landing Pages</a>
+    <a href="pricing-page-tests.html">Pricing Pages</a>
+    <a href="signup-tests.html">Signup &amp; Demo</a>
+    <a href="ab-test-brief-template.html">Brief Template</a>
+    <a href="sample-size-calculator.html">Calculator</a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>10 Pricing Page Tests That Affect Revenue, Not Just Clicks</h1>
+  <p>
+    Pricing pages sit at the bottom of the funnel, so even small improvements
+    compound into real revenue. Each experiment below includes a hypothesis, the
+    change, the metric to track, and what can go wrong.
+  </p>
+
+  <h2>Toggle &amp; Default Behaviour</h2>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Toggle</span><span class="tag tag--risk-low">Low risk</span></div>
+    <h3>1. Default to annual billing</h3>
+    <p><strong>Hypothesis:</strong> Pre-selecting the annual toggle will increase the share of annual plans chosen because most visitors accept the default, and the lower per-month price shown will reduce sticker shock.</p>
+    <p><strong>Change:</strong> Set the monthly/annual toggle to "Annual" on page load.</p>
+    <p><strong>Primary metric:</strong> Percentage of new subscriptions on annual plans.</p>
+    <p><strong>What could go wrong:</strong> Some visitors may feel tricked if the switch is not obvious. Make the toggle large and clearly labelled.</p>
+  </div>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Pricing display</span><span class="tag tag--risk-low">Low risk</span></div>
+    <h3>2. Show per-month price on annual plans vs. total annual price</h3>
+    <p><strong>Hypothesis:</strong> Displaying "$29/mo billed annually" instead of "$348/year" will increase annual plan selection because the monthly frame feels smaller and is easier to compare against monthly pricing.</p>
+    <p><strong>Change:</strong> Reformat the price label. No pricing changes.</p>
+    <p><strong>Primary metric:</strong> Annual plan selection rate.</p>
+    <p><strong>What could go wrong:</strong> Almost nothing. This is a framing change, not a pricing change.</p>
+  </div>
+
+  <h2>Plan Emphasis &amp; Anchoring</h2>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Plan highlight</span><span class="tag tag--risk-med">Medium risk</span></div>
+    <h3>3. Highlight the middle plan vs. the cheapest plan</h3>
+    <p><strong>Hypothesis:</strong> Adding a "Most Popular" badge and subtle border highlight to the mid-tier plan will shift plan distribution upward because the visual emphasis acts as a recommendation signal.</p>
+    <p><strong>Change:</strong> Add a badge and slight background change to the mid-tier column.</p>
+    <p><strong>Primary metric:</strong> Plan distribution (share of mid-tier signups).</p>
+    <p><strong>What could go wrong:</strong> If the mid-tier price is much higher than the lowest tier, the badge alone will not bridge the gap. Ensure the value gap between tiers is clearly explained.</p>
+  </div>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Anchoring</span><span class="tag tag--risk-med">Medium risk</span></div>
+    <h3>4. Add a high-priced enterprise column</h3>
+    <p><strong>Hypothesis:</strong> Showing a visibly expensive enterprise tier (even as "Contact Us") will make the mid-tier plan feel more reasonable by contrast, increasing mid-tier conversion.</p>
+    <p><strong>Change:</strong> Add a fourth column with enterprise features and a "Contact Sales" CTA.</p>
+    <p><strong>Primary metric:</strong> Mid-tier plan conversion rate.</p>
+    <p><strong>What could go wrong:</strong> An enterprise column that looks empty or poorly defined can reduce trust. Only add it if you can list real enterprise features.</p>
+  </div>
+
+  <h2>Trust &amp; Objection Handling</h2>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Trust</span><span class="tag tag--risk-low">Low risk</span></div>
+    <h3>5. Add a money-back guarantee badge</h3>
+    <p><strong>Hypothesis:</strong> Showing a "30-day money-back guarantee" badge near the CTA will increase paid conversions because it reduces perceived financial risk.</p>
+    <p><strong>Change:</strong> Add a small badge or text line beneath each plan's CTA button.</p>
+    <p><strong>Primary metric:</strong> Checkout initiation rate.</p>
+    <p><strong>What could go wrong:</strong> If you do not actually honour refunds easily, this creates a support burden. Only add if refund policy is real and simple.</p>
+  </div>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">FAQ</span><span class="tag tag--risk-low">Low risk</span></div>
+    <h3>6. FAQ position: below pricing table vs. inline accordion</h3>
+    <p><strong>Hypothesis:</strong> Moving the top 3-4 pricing FAQs into a compact accordion directly beside or below the pricing table will reduce drop-off because visitors get answers without scrolling away from the decision point.</p>
+    <p><strong>Change:</strong> Place an accordion FAQ section immediately beneath the pricing columns. Keep it to 4 questions max: billing cycle, cancellation, what happens after trial, and upgrade/downgrade policy.</p>
+    <p><strong>Primary metric:</strong> Pricing page exit rate; secondary: checkout starts.</p>
+    <p><strong>What could go wrong:</strong> Too many questions can clutter the layout. Limit to objection-focused questions only.</p>
+  </div>
+
+  <h2>Feature Comparison</h2>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Comparison table</span><span class="tag tag--risk-med">Medium risk</span></div>
+    <h3>7. Expandable feature table vs. full table always visible</h3>
+    <p><strong>Hypothesis:</strong> Collapsing the full feature comparison table behind a "Compare all features" link will increase CTA clicks because the table currently pushes the CTA below the fold and overwhelms visitors who do not need granular detail.</p>
+    <p><strong>Change:</strong> Show the top 5 differentiating features. Hide the rest behind an expand link.</p>
+    <p><strong>Primary metric:</strong> CTA click rate on pricing cards.</p>
+    <p><strong>What could go wrong:</strong> Power users who need the full table may miss it. Make the expand link prominent.</p>
+  </div>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Feature framing</span><span class="tag tag--risk-low">Low risk</span></div>
+    <h3>8. Checkmarks vs. descriptive feature labels</h3>
+    <p><strong>Hypothesis:</strong> Replacing generic checkmarks with short benefit-oriented descriptions (e.g., "Unlimited A/B tests" instead of a check under "Testing") will increase plan selection because visitors understand what they get without cross-referencing a legend.</p>
+    <p><strong>Change:</strong> Rewrite feature row labels to be self-explanatory. Remove the check/cross icons where possible.</p>
+    <p><strong>Primary metric:</strong> Plan CTA clicks.</p>
+    <p><strong>What could go wrong:</strong> Longer labels can make the table wider on mobile. Test on small screens first.</p>
+  </div>
+
+  <h2>CTA &amp; Urgency</h2>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">CTA copy</span><span class="tag tag--risk-low">Low risk</span></div>
+    <h3>9. "Start free trial" vs. "Start my [Plan Name] trial"</h3>
+    <p><strong>Hypothesis:</strong> Personalising the CTA text to include the plan name (e.g., "Start my Pro trial") will increase clicks because it reinforces the visitor's choice and creates a micro-commitment.</p>
+    <p><strong>Change:</strong> Update each plan's CTA button text to include the plan name.</p>
+    <p><strong>Primary metric:</strong> Per-plan CTA click rate.</p>
+    <p><strong>What could go wrong:</strong> Very little. This is a copy-only change.</p>
+  </div>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Urgency</span><span class="tag tag--risk-high">High risk</span></div>
+    <h3>10. Limited-time discount banner vs. no discount</h3>
+    <p><strong>Hypothesis:</strong> Showing a genuine time-limited discount (e.g., "20% off annual plans this month") will increase paid conversions because urgency accelerates decision-making.</p>
+    <p><strong>Change:</strong> Add a banner or strikethrough price on the annual toggle.</p>
+    <p><strong>Primary metric:</strong> Paid conversion rate; secondary: refund/churn rate in first 30 days.</p>
+    <p><strong>What could go wrong:</strong> Fake urgency erodes trust fast. Only run this if the discount is real and expires on a real date. Watch churn: discount-motivated signups may churn more.</p>
+  </div>
+
+  <h2>When to Run These</h2>
+  <p>
+    Pricing page tests affect revenue directly, so you need reliable traffic volume
+    to reach significance. Use the
+    <a href="sample-size-calculator.html">sample-size calculator</a> to check.
+    Start with low-risk tests (1, 2, 5, 6, 8, 9) and only run urgency-based tests
+    (10) when you have strong data showing that price is the primary objection.
+  </p>
+
+  <div class="cta-banner">
+    <p>Run pricing experiments without waiting for a dev sprint.</p>
+    <a class="btn" href="https://crolabs.com">Try CROLabs free</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  &copy; 2025 <a href="https://crolabs.com">CROLabs</a>. This experiment library
+  is open-source and provided as-is.
+</footer>
+
+</body>
+</html>

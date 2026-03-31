@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>12 Landing Page CRO Experiments for SaaS Teams</title>
+  <meta name="description" content="Practical A/B test ideas for SaaS landing pages: hero copy, proof blocks, CTAs, forms, and layout changes that move conversion rates.">
+  <link rel="canonical" href="https://crolabs.github.io/crolabs-experiment-library/landing-page-tests.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="./"><img src="images/logo.svg" alt="CROLabs"> Experiment Library</a>
+  <nav>
+    <a href="landing-page-tests.html">Landing Pages</a>
+    <a href="pricing-page-tests.html">Pricing Pages</a>
+    <a href="signup-tests.html">Signup &amp; Demo</a>
+    <a href="ab-test-brief-template.html">Brief Template</a>
+    <a href="sample-size-calculator.html">Calculator</a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>12 Landing Page Tests Worth Running Before You Buy More Traffic</h1>
+  <p>
+    Every experiment below follows the same format: a hypothesis, the change you
+    make, the primary metric, and the risk level. Adapt them to your own page and
+    run them in whatever testing tool you use.
+  </p>
+
+  <h2>Hero &amp; Above the Fold</h2>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Hero copy</span><span class="tag tag--risk-low">Low risk</span></div>
+    <h3>1. Outcome-first headline vs. feature-first headline</h3>
+    <p><strong>Hypothesis:</strong> Leading with the result the visitor gets ("Double your demo bookings") instead of the product feature ("AI-powered scheduling") will increase CTA clicks because visitors care more about outcomes than capabilities.</p>
+    <p><strong>Change:</strong> Rewrite the H1 to start with a measurable outcome. Keep sub-head and CTA identical.</p>
+    <p><strong>Primary metric:</strong> Hero CTA click-through rate.</p>
+    <p><strong>What could go wrong:</strong> Outcome claims without proof can feel like hype. Pair with a credibility line or stat beneath the headline.</p>
+  </div>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Hero layout</span><span class="tag tag--risk-med">Medium risk</span></div>
+    <h3>2. Hero image vs. embedded product demo</h3>
+    <p><strong>Hypothesis:</strong> Replacing a static hero image with a short auto-playing product walkthrough (muted, looped) will increase time on page and CTA clicks because visitors get instant proof the product works.</p>
+    <p><strong>Change:</strong> Swap the hero image for a 15-second looped video or animated GIF walkthrough. Keep file size under 2&nbsp;MB to avoid layout shift.</p>
+    <p><strong>Primary metric:</strong> CTA click-through rate; secondary: bounce rate.</p>
+    <p><strong>What could go wrong:</strong> Slow load on mobile. Always lazy-load and test on 3G throttle before launching.</p>
+  </div>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">CTA copy</span><span class="tag tag--risk-low">Low risk</span></div>
+    <h3>3. Generic CTA vs. value-specific CTA</h3>
+    <p><strong>Hypothesis:</strong> Changing "Get Started" to "Start my free audit" will increase clicks because the button now previews what happens next and reinforces the free offer.</p>
+    <p><strong>Change:</strong> Update button text only. No layout or design changes.</p>
+    <p><strong>Primary metric:</strong> Button click-through rate.</p>
+    <p><strong>What could go wrong:</strong> Minimal. This is one of the lowest-risk tests you can run.</p>
+  </div>
+
+  <h2>Social Proof &amp; Trust</h2>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Social proof</span><span class="tag tag--risk-low">Low risk</span></div>
+    <h3>4. Logo bar position: above the fold vs. below</h3>
+    <p><strong>Hypothesis:</strong> Moving the client logo bar from below the features section to directly beneath the hero will reduce bounce rate because visitors see credibility signals before they decide to scroll or leave.</p>
+    <p><strong>Change:</strong> Move the logo bar component higher in the DOM. No copy changes.</p>
+    <p><strong>Primary metric:</strong> Bounce rate; secondary: scroll depth past fold.</p>
+    <p><strong>What could go wrong:</strong> If your logos are not recognisable to the target audience, this test will likely be flat. Use logos the visitor would actually know.</p>
+  </div>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Testimonials</span><span class="tag tag--risk-med">Medium risk</span></div>
+    <h3>5. Testimonial carousel vs. single featured quote</h3>
+    <p><strong>Hypothesis:</strong> Replacing a rotating carousel with one high-impact testimonial (with photo, name, title, and a specific result) will increase CTA clicks because carousels are often ignored and a single strong proof point is more persuasive.</p>
+    <p><strong>Change:</strong> Remove carousel. Display one testimonial with a quantitative result, e.g. "Conversion rate went from 2.1% to 4.8% in six weeks."</p>
+    <p><strong>Primary metric:</strong> CTA clicks below the testimonial section.</p>
+    <p><strong>What could go wrong:</strong> If you only have generic praise ("Great tool!"), neither version will help much. Pick the testimonial with the most specific result.</p>
+  </div>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Trust signals</span><span class="tag tag--risk-low">Low risk</span></div>
+    <h3>6. Add a real-time activity counter</h3>
+    <p><strong>Hypothesis:</strong> Showing "X teams ran experiments this week" near the CTA will increase signups by creating social proof and a sense of active usage.</p>
+    <p><strong>Change:</strong> Add a small text line or badge near the primary CTA. Use real data, not inflated numbers.</p>
+    <p><strong>Primary metric:</strong> CTA conversion rate.</p>
+    <p><strong>What could go wrong:</strong> If your numbers are low early on, the counter can work against you. Only show this when the number is impressive for your stage.</p>
+  </div>
+
+  <h2>Form &amp; Friction</h2>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Form length</span><span class="tag tag--risk-med">Medium risk</span></div>
+    <h3>7. Multi-field form vs. email-only first step</h3>
+    <p><strong>Hypothesis:</strong> Reducing the visible signup form to just an email field (collecting name and company in a second step) will increase form starts because the perceived effort is lower.</p>
+    <p><strong>Change:</strong> Hide all fields except email behind a "Continue" button. Collect the rest on the next screen.</p>
+    <p><strong>Primary metric:</strong> Form completion rate (not just form starts).</p>
+    <p><strong>What could go wrong:</strong> You may get more spam or low-intent signups. Watch lead quality alongside volume.</p>
+  </div>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Friction</span><span class="tag tag--risk-low">Low risk</span></div>
+    <h3>8. Add "No credit card required" near the CTA</h3>
+    <p><strong>Hypothesis:</strong> Explicitly stating there is no credit card needed will reduce hesitation and increase CTA clicks because it removes a common objection before it forms.</p>
+    <p><strong>Change:</strong> Add a single line of microcopy directly beneath the CTA button.</p>
+    <p><strong>Primary metric:</strong> CTA click-through rate.</p>
+    <p><strong>What could go wrong:</strong> Almost nothing. If you already do not require a card, stating it is purely upside.</p>
+  </div>
+
+  <h2>Layout &amp; Content Order</h2>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Section order</span><span class="tag tag--risk-med">Medium risk</span></div>
+    <h3>9. Move FAQ above the feature grid</h3>
+    <p><strong>Hypothesis:</strong> Visitors who land from search often have specific objections. Showing FAQ answers earlier will reduce bounce rate and increase scroll-to-CTA because objections are addressed before attention fades.</p>
+    <p><strong>Change:</strong> Move the FAQ section to appear directly after the hero and proof block, before the feature breakdown.</p>
+    <p><strong>Primary metric:</strong> Scroll depth to CTA section; secondary: bounce rate.</p>
+    <p><strong>What could go wrong:</strong> If your FAQ is generic or too long, it can push valuable content below the fold. Keep it to 4-5 high-value questions.</p>
+  </div>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Visual hierarchy</span><span class="tag tag--risk-high">High risk</span></div>
+    <h3>10. Long-form page vs. short page with jump links</h3>
+    <p><strong>Hypothesis:</strong> A compact page with anchor-linked sections will outperform a long scroll page because visitors can self-navigate to the content that matters to them, reducing cognitive load.</p>
+    <p><strong>Change:</strong> Add a sticky jump-link nav near the top. Collapse less critical sections behind "Read more" expanders.</p>
+    <p><strong>Primary metric:</strong> Overall page conversion rate.</p>
+    <p><strong>What could go wrong:</strong> Collapsing content hides it from visitors who would have scrolled past it. Run this only if you have strong evidence that your page is too long for your audience.</p>
+  </div>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">CTA placement</span><span class="tag tag--risk-low">Low risk</span></div>
+    <h3>11. Sticky bottom-bar CTA on mobile</h3>
+    <p><strong>Hypothesis:</strong> Adding a persistent CTA bar at the bottom of the mobile viewport will increase mobile conversions because the action is always visible regardless of scroll position.</p>
+    <p><strong>Change:</strong> Add a fixed-position bar with the primary CTA. Only show on viewports under 768px.</p>
+    <p><strong>Primary metric:</strong> Mobile CTA click rate.</p>
+    <p><strong>What could go wrong:</strong> It can feel intrusive. Make the bar small, dismissible, and ensure it does not cover content.</p>
+  </div>
+
+  <div class="experiment">
+    <div class="tags"><span class="tag">Personalisation</span><span class="tag tag--risk-high">High risk</span></div>
+    <h3>12. Segment-specific landing pages vs. one generic page</h3>
+    <p><strong>Hypothesis:</strong> Showing different hero copy and proof points based on UTM source or audience segment will increase conversion rate because visitors see messaging tailored to their context.</p>
+    <p><strong>Change:</strong> Create 2-3 variants of hero + proof section. Route traffic by UTM parameter or referral source.</p>
+    <p><strong>Primary metric:</strong> Conversion rate per segment.</p>
+    <p><strong>What could go wrong:</strong> Maintenance overhead scales with variant count. Start with your top two traffic sources only.</p>
+  </div>
+
+  <h2>When to Run These</h2>
+  <p>
+    Start with the low-risk experiments (1, 3, 4, 6, 8, 11) to build a baseline
+    of wins. Move to medium-risk tests once you have enough traffic for
+    statistical significance&mdash;use the
+    <a href="sample-size-calculator.html">sample-size calculator</a> to check.
+    Save high-risk tests (10, 12) for when you have strong qualitative data
+    supporting the hypothesis.
+  </p>
+
+  <div class="cta-banner">
+    <p>These experiments are easier to launch inside CROLabs' visual editor&mdash;no dev queue required.</p>
+    <a class="btn" href="https://crolabs.com">Try CROLabs free</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  &copy; 2025 <a href="https://crolabs.com">CROLabs</a>. This experiment library
+  is open-source and provided as-is.
+</footer>
+
+</body>
+</html>
